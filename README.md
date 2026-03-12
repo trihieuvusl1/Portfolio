@@ -1,8 +1,6 @@
 # Portfolio
 
-# Data Analytics and Visualization 
-
-Welcome to my professional portfolio. I am a Quantitative Methods in Economics and Information Systems student at SGH Warsaw School of Economics. This repository showcases my work in data-driven analysis, financial modeling, and interactive visualization.
+Welcome to my portfolio. I am a Quantitative Methods in Economics and Information Systems student at SGH Warsaw School of Economics. This repository showcases my work in data-driven analysis, financial modeling, and interactive visualization.
 
 ---
 
@@ -15,20 +13,6 @@ Developed a comprehensive dashboard to track and analyze the global impact of CO
 * Data Visualization: Created dynamic charts to monitor changes in cases and deaths across different regions.
 * Comparative Analysis: Built features to compare recovery rates and healthcare responses between countries.
 * Data Integration: Processed datasets to ensure accuracy in trend forecasting and geographical mapping.
-
----
-
-## Technical Skills & Relevant Coursework
-* Data Analysis: Applied Econometrics, Probability Theory, Statistics
-* Programming & Databases: Python, Java, SQL
-* Tools: R, Tableau, Excel
-* Languages: English (Advanced), Polish (Intermediate), Vietnamese (Native)
-
----
-
-## Education
-* B.Sc. in Quantitative Methods in Economics and Information Systems - SGH Warsaw School of Economics (Poland)
-* Former Student in Data Science in Economics and Business - National Economics University (Vietnam)
 
 ---
 
