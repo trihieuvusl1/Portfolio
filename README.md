@@ -121,15 +121,16 @@ Tracks the average percent of population infected by month across selected count
 
 ## Key Insights
 
-**Europe had the highest death toll despite not being the most populous continent. The bar chart shows Europe surpassing 1 million total deaths, which is more than North America and South America combined. This points to the severity of early outbreaks in Italy, Spain, and the UK before containment measures took effect.
+Europe had the highest death toll despite not being the most populous continent. The bar chart shows Europe surpassing 1 million total deaths, which is more than North America and South America combined. This points to the severity of early outbreaks in Italy, Spain, and the UK before containment measures took effect.
 
-**The United States was the fastest-spreading case in the dataset. The line chart shows the US pulling sharply ahead of all tracked countries from mid-2020 onward and reaching nearly 9% of the population infected by April 2021. The forecast line projects this could approach 19% by end of 2021 if the trajectory continued unchecked.
+The United States was the fastest-spreading case in the dataset. The line chart shows the US pulling sharply ahead of all tracked countries from mid-2020 onward and reaching nearly 9% of the population infected by April 2021. The forecast line projects this could approach 19% by end of 2021 if the trajectory continued unchecked.
 
-**Western Europe dominates the world map in both spread and color intensity. Small, densely populated countries in Europe, which are visible as deep blue on the map, had the highest PercentPopulationInfected ratios. This reflects both genuine spread and relatively thorough testing and reporting compared to other regions.
+Western Europe dominates the world map in both spread and color intensity. Small, densely populated countries in Europe, which are visible as deep blue on the map, had the highest PercentPopulationInfected ratios. This reflects both genuine spread and relatively thorough testing and reporting compared to other regions.
 
-**Asia and Africa appear significantly lighter on the map, but this likely reflects reporting gaps as much as lower transmission. India, despite having one of the world's largest populations, recorded only 1.27% population infected by April 2021, and this figure is widely considered an undercount given limited testing infrastructure at the time.
+Asia and Africa appear significantly lighter on the map, but this likely reflects reporting gaps as much as lower transmission. India, despite having one of the world's largest populations, recorded only 1.27% population infected by April 2021, and this figure is widely considered an undercount given limited testing infrastructure at the time.
 
-**The pandemic's acceleration was not linear. The line chart shows near-flat curves through the first half of 2020, followed by a steep inflection point in October 2020 that continued through April 2021. This second wave was structurally different from the first because it was faster, broader, and affecting countries that had managed to suppress the first wave relatively well.
+The pandemic's acceleration was not linear. The line chart shows near-flat curves through the first half of 2020, followed by a steep inflection point in October 2020 that continued through April 2021. This second wave was structurally different from the first because it was faster, broader, and affecting countries that had managed to suppress the first wave relatively well.
+
 ---
 
 ## Workflow
