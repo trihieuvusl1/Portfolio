@@ -16,7 +16,7 @@
 
 ## Overview
 
-Between January 2020 and April 2021, COVID-19 spread to every continent and infected over 150 million people worldwide. This dashboard was built to turn 85,000 rows of raw pandemic data into a clear visual narrative — answering where the virus spread fastest, which regions suffered the most deaths, and how infection rates evolved over time across key countries.
+Between January 2020 and April 2021, COVID-19 spread to every continent and infected over 150 million people worldwide. This dashboard was built to transform 85,000 rows of raw pandemic data into a clear visual narrative and it answers where the virus spread fastest, which regions suffered the most deaths, and how infection rates evolved over time across key countries.
 
 The pipeline is straightforward: four SQL queries extract the most relevant slices of data from two source tables, the results are exported to Excel, and Tableau assembles them into a single unified dashboard.
 
@@ -39,16 +39,16 @@ Coverage spans 219 countries and territories across 6 continents from 1 January 
 
 Four SQL queries were written to extract the data behind each sheet in the dashboard.
 
-**Query 1 — Global KPI Summary**
+**Query 1: Global KPI Summary**
 Aggregates all country-level records (where `continent is not null`) to produce total confirmed cases, total deaths, and global death percentage.
 
-**Query 2 — Total Deaths by Continent**
+**Query 2: Total Deaths by Continent**
 Filters to continent-aggregate rows (where `continent is null`) and groups by location, excluding 'World', 'European Union', and 'International' to avoid double-counting.
 
-**Query 3 — Infection Rate by Country**
+**Query 3: Infection Rate by Country**
 Groups by location and population, taking the maximum total cases per country and expressing it as a percentage of population — used to color the world map.
 
-**Query 4 — Infection Rate Over Time**
+**Query 4: Infection Rate Over Time**
 Extends Query 3 by adding date to the group, producing a time-series of percent population infected per country per day — used for the line chart.
 
 ---
@@ -56,7 +56,7 @@ Extends Query 3 by adding date to the group, producing a time-series of percent 
 ## SQL Queries
 
 ```sql
--- Query 1: Global KPI Summary
+-- Query 1: Global Summary
 SELECT
     SUM(new_cases)                                       AS total_cases,
     SUM(CAST(new_deaths AS INT))                         AS total_deaths,
@@ -79,7 +79,7 @@ ORDER BY TotalDeathCount DESC;
 ```
 
 ```sql
--- Query 3: Highest Infection Rate by Country (snapshot)
+-- Query 3: Highest Infection Rate by Country 
 SELECT
     location,
     population,
@@ -107,32 +107,31 @@ ORDER BY PercentPopulationInfected DESC;
 
 ## Dashboard Sheets
 
-**Sheet 1 — Global Numbers (KPI Table)**
+**Sheet 1: Global Numbers (KPI Table)**
 Three headline metrics at a glance: 150,574,977 total cases, 3,180,206 total deaths, and a global death percentage of 2.11%.
 
-**Sheet 2 — Total Deaths Per Continent (Bar Chart)**
+**Sheet 2: Total Deaths Per Continent (Bar Chart)**
 Ranks continents by absolute confirmed death count. Europe leads, followed by North America and South America, while Africa records the lowest count in the dataset.
 
-**Sheet 3 — Percent Population Infected Per Country (World Map)**
+**Sheet 3: Percent Population Infected Per Country (World Map)**
 Each country is shaded by what percentage of its population was confirmed infected, on a scale from 0% to 17.13%. Europe shows the deepest concentration of dark shading, indicating the highest infection rates relative to population size.
 
-**Sheet 4 — Percent Population Infected Over Time (Line Chart)**
+**Sheet 4: Percent Population Infected Over Time (Line Chart)**
 Tracks the average percent of population infected by month across selected countries, with Tableau forecast lines extending beyond April 2021. The United States leads at 8.93% actual and a forecast of 19.11% by late 2021, followed by the United Kingdom at 14.93%, Poland at 11.61%, Italy at 5.40%, and India at 1.27%.
 
 ---
 
 ## Key Insights
 
-**Europe had the highest death toll despite not being the most populous continent.** The bar chart shows Europe surpassing 1 million total deaths — more than North America and South America combined — which points to the severity of early outbreaks in Italy, Spain, and the UK before containment measures took effect.
+**Europe had the highest death toll despite not being the most populous continent. The bar chart shows Europe surpassing 1 million total deaths, which is more than North America and South America combined. This points to the severity of early outbreaks in Italy, Spain, and the UK before containment measures took effect.
 
-**The United States was the fastest-spreading case in the dataset.** The line chart shows the US pulling sharply ahead of all tracked countries from mid-2020 onward, reaching nearly 9% of the population infected by April 2021. The forecast line projects this could approach 19% by end of 2021 if the trajectory continued unchecked.
+**The United States was the fastest-spreading case in the dataset. The line chart shows the US pulling sharply ahead of all tracked countries from mid-2020 onward and reaching nearly 9% of the population infected by April 2021. The forecast line projects this could approach 19% by end of 2021 if the trajectory continued unchecked.
 
-**Western Europe dominates the world map in both spread and color intensity.** Small, densely populated countries in Europe — visible as deep blue on the map — had the highest PercentPopulationInfected ratios, reflecting both genuine spread and relatively thorough testing and reporting compared to other regions.
+**Western Europe dominates the world map in both spread and color intensity. Small, densely populated countries in Europe, which are visible as deep blue on the map, had the highest PercentPopulationInfected ratios. This reflects both genuine spread and relatively thorough testing and reporting compared to other regions.
 
-**Asia and Africa appear significantly lighter on the map, but this likely reflects reporting gaps as much as lower transmission.** India, despite having one of the world's largest populations, recorded only 1.27% population infected by April 2021 — a figure widely considered an undercount given limited testing infrastructure at the time.
+**Asia and Africa appear significantly lighter on the map, but this likely reflects reporting gaps as much as lower transmission. India, despite having one of the world's largest populations, recorded only 1.27% population infected by April 2021, and this figure is widely considered an undercount given limited testing infrastructure at the time.
 
-**The pandemic's acceleration was not linear.** The line chart shows near-flat curves through the first half of 2020, followed by a steep inflection point in October 2020 that continued through April 2021. This second wave was structurally different from the first — faster, broader, and affecting countries that had managed to suppress the first wave relatively well.
-
+**The pandemic's acceleration was not linear. The line chart shows near-flat curves through the first half of 2020, followed by a steep inflection point in October 2020 that continued through April 2021. This second wave was structurally different from the first because it was faster, broader, and affecting countries that had managed to suppress the first wave relatively well.
 ---
 
 ## Workflow
@@ -174,6 +173,6 @@ COVID19-Dashboard/
 
 ## References
 
-Our World in Data — COVID-19 Deaths and Vaccinations Dataset: https://ourworldindata.org/covid-deaths
-Johns Hopkins University CSSE — COVID-19 Data Repository: https://github.com/CSSEGISandData/COVID-19
-World Health Organization — COVID-19 Dashboard: https://covid19.who.int/
+Our World in Data - COVID-19 Deaths and Vaccinations Dataset: https://ourworldindata.org/covid-deaths
+Johns Hopkins University CSSE - COVID-19 Data Repository: https://github.com/CSSEGISandData/COVID-19
+World Health Organization - COVID-19 Dashboard: https://covid19.who.int/
