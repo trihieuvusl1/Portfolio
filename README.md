@@ -173,5 +173,7 @@ COVID19-Dashboard/
 ## References
 
 Our World in Data - COVID-19 Deaths and Vaccinations Dataset: https://ourworldindata.org/covid-deaths
+
 Johns Hopkins University CSSE - COVID-19 Data Repository: https://github.com/CSSEGISandData/COVID-19
+
 World Health Organization - COVID-19 Dashboard: https://covid19.who.int/
