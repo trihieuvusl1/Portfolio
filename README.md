@@ -107,7 +107,7 @@ ORDER BY PercentPopulationInfected DESC;
 
 ## Dashboard Sheets
 
-**Sheet 1: Global Numbers (KPI Table)**
+**Sheet 1: Global Numbers (Summary Table)**
 Three headline metrics at a glance: 150,574,977 total cases, 3,180,206 total deaths, and a global death percentage of 2.11%.
 
 **Sheet 2: Total Deaths Per Continent (Bar Chart)**
